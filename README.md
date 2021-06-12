@@ -1,12 +1,5 @@
 # Node.js Web Crawler
 
-[![npm](https://img.shields.io/npm/v/supercrawler.svg?maxAge=2592000)]()
-[![npm](https://img.shields.io/npm/l/supercrawler.svg?maxAge=2592000)]()
-[![GitHub issues](https://img.shields.io/github/issues/brendonboshell/supercrawler.svg?maxAge=2592000)]()
-[![David](https://img.shields.io/david/brendonboshell/supercrawler.svg?maxAge=2592000)]()
-[![David](https://img.shields.io/david/dev/brendonboshell/supercrawler.svg?maxAge=2592000)]()
-[![Travis](https://img.shields.io/travis/brendonboshell/supercrawler.svg?maxAge=2592000)]()
-
 Supercrawler is a Node.js web crawler. It is designed to be highly configurable and easy to use.
 
 When Supercrawler successfully crawls a page (which could be an image, a text document or any other file), it will fire your custom content-type handlers. Define your own custom handlers to parse pages, save data and do anything else you need.
@@ -74,7 +67,7 @@ var crawler = new supercrawler.Crawler({
   // Time (ms) to cache the results of robots.txt queries.
   robotsCacheTime: 3600000,
   // Query string to use during the crawl.
-  userAgent: "Mozilla/5.0 (compatible; supercrawler/1.0; +https://github.com/brendonboshell/supercrawler)",
+  userAgent: "Mozilla/5.0 (compatible; supercrawler/2.0; +https://github.com/cbess/supercrawler)",
   // Custom options to be passed to request.
   request: {
     headers: {

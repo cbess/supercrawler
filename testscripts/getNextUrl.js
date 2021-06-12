@@ -1,20 +1,22 @@
-var supercrawler = require("../lib");
+const supercrawler = require("../lib");
 
-var crawler = new supercrawler.Crawler({
+const crawler = new supercrawler.Crawler({
   interval: 1000,
   concurrentRequestsLimit: 5,
-  urlList: new supercrawler.RedisUrlList({
-    redis: {
-      port: 6379,
-      host: '127.0.0.1'
+  urlList: new supercrawler.DbUrlList({
+    db: {
+      sequelizeOpts: {
+        dialect: 'sqlite',
+        storage: 'tmp.sqlite',
+      }
     }
   })
 });
 
-var strUrl = "https://sweetpricing.com/" + Math.random();
+const startUrl = 'https://perfectgod.com/';
 
 crawler.getUrlList().insertIfNotExists(new supercrawler.Url({
-  url: strUrl
+  url: startUrl
 })).then(function () {
   return crawler.getUrlList().getNextUrl().then(function () {
     console.log(arguments);

@@ -36,5 +36,8 @@
     "robots-parser": "^2.1.1",
     "sequelize": "^5.8.5",
     "sqlite3": "^4.0.7"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
