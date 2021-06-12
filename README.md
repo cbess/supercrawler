@@ -129,10 +129,10 @@ crawler with the following options:
 | Option | Description |
 | --- | --- |
 | urlList | Custom instance of `UrlList` type queue. Defaults to `FifoUrlList`, which processes URLs in the order that they were added to the queue; once they are removed from the queue, they cannot be recrawled. |
-| interval | Number of milliseconds between requests. Defaults to 1000. |
-| concurrentRequestsLimit | Maximum number of concurrent requests. Defaults to 5. |
+| interval | Number of milliseconds between requests. This can be either a number or a function. Defaults to `1000`. |
+| concurrentRequestsLimit | Maximum number of concurrent requests. Defaults to `5`. |
 | robotsEnabled | Indicates if the robots.txt is downloaded and checked. Defaults to `true`. |
-| robotsCacheTime | Number of milliseconds that robots.txt should be cached for. Defaults to 3600000 (1 hour). |
+| robotsCacheTime | Number of milliseconds that robots.txt should be cached for. Defaults to `3600000` (1 hour). |
 | robotsIgnoreServerError | Indicates if `500` status code response for robots.txt should be ignored. Defaults to `false`. |
 | userAgent | User agent to use for requests. This can be either a string or a function that takes the URL being crawled. Defaults to `Mozilla/5.0 (compatible; supercrawler/1.0; +https://github.com/brendonboshell/supercrawler)`. |
 | request | Object of options to be passed to [request](https://github.com/request/request). Note that request does not support an asynchronous (and distributed) cookie jar. |
