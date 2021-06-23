@@ -4,14 +4,14 @@ const supercrawler = require('../lib');
 const crawler = new supercrawler.Crawler({
   interval: 100,
   concurrentRequestsLimit: 5,
-  urlList: new supercrawler.DbUrlList({
-    db: {
-      sequelizeOpts: {
-        dialect: 'sqlite',
-        storage: 'tmp.sqlite',
-      }
-    }
-  })
+  // urlList: new supercrawler.DbUrlList({
+  //   db: {
+  //     sequelizeOpts: {
+  //       dialect: 'sqlite',
+  //       storage: 'tmp.sqlite',
+  //     }
+  //   }
+  // })
 });
 
 const hostname = 'perfectgod.com';

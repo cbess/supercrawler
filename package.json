@@ -1,7 +1,7 @@
 {
   "name": "supercrawler",
   "description": "A web crawler. Supercrawler automatically crawls websites. Define custom handlers to parse content. Obeys robots.txt, rate limits and concurrency limits.",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "homepage": "https://github.com/cbess/supercrawler",
   "license": "Apache-2.0",
   "repository": {
@@ -26,16 +26,16 @@
     "sinon": "^1.17.7"
   },
   "dependencies": {
-    "bluebird": "^3.5.4",
+    "axios": "0.21.1",
+    "bluebird": "3.7.2",
     "cheerio": "1.0.0-rc.10",
     "ioredis": "4.9.3",
-    "lodash": "^4.17.11",
-    "mime-types": "^2.1.24",
-    "node-cache": "^4.2.0",
-    "request": "^2.88.0",
-    "robots-parser": "^2.1.1",
-    "sequelize": "^5.8.5",
-    "sqlite3": "^4.0.7"
+    "lodash": "4.17.21",
+    "mime-types": "2.1.31",
+    "node-cache": "4.2.0",
+    "robots-parser": "2.3.0",
+    "sequelize": "6.6.2",
+    "sqlite3": "5.0.2"
   },
   "engines": {
     "node": ">=14"
